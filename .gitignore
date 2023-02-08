@@ -3,3 +3,4 @@ Dataset_2
 *.mdl
 *.csv
 .idea
+__pycache__
