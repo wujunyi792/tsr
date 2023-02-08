@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import DataLoader
 import pandas as pd
-from MyDataset import MyDataset
+from MyDataset import TrainingDataset
 from Model import Model
 
 if __name__ == '__main__':
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     Loss = []
     Acc = []
 
-    train_dataset = MyDataset()
+    train_dataset = TrainingDataset()
 
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 

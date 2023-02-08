@@ -71,16 +71,16 @@ def show(img):
     cv2.destroyAllWindows()
 
 
-if __name__ == '__main__':
-    with open(path.join(basePath, "Train.csv")) as f:
-        lines = csv.reader(f)
-        title = True
-        for line in lines:
-            if title:
-                title = False
-                continue
-            # print(line)
-            img = cv2.imread(path.join(basePath, line[7]))
-
-            x, y = img.shape[0:2]
-            show(cv2.resize(img, (200, 200)))
+# if __name__ == '__main__':
+#     with open(path.join(basePath, "Train.csv")) as f:
+#         lines = csv.reader(f)
+#         title = True
+#         for line in lines:
+#             if title:
+#                 title = False
+#                 continue
+#             # print(line)
+#             img = cv2.imread(path.join(basePath, line[7]))
+#
+#             x, y = img.shape[0:2]
+#             show(cv2.resize(img, (200, 200)))
