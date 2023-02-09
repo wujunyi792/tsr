@@ -17,7 +17,6 @@ class TrainingDataset(Dataset):
         for i in range(data.shape[0]):
             self.data_path[i] = os.path.join(root, self.data_path[i])
         self.x = np.load('x.npy').tolist()
-        np.save('x.npy', np.array(self.x))
 
     def __getitem__(self, item):
         # print(x)
@@ -45,8 +44,7 @@ class TestingDataset(Dataset):
         self.label = data['ClassId']
         for i in range(data.shape[0]):
             self.data_path[i] = os.path.join(root, self.data_path[i])
-        self.x = np.load('x.npy').tolist()
-        np.save('x.npy', np.array(self.x))
+        self.x = np.load('test_x.npy').tolist()
 
     def __getitem__(self, item):
         # print(x)
